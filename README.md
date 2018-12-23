@@ -91,10 +91,29 @@ python run.py
 
 ## Templating flask project with bootstrap
 
-This project will use [Lumino Template Bootstrap](https://medialoot.com/item/lumino-admin-bootstrap-template/)
+This project will use [Lumino Template Bootstrap](https://medialoot.com/item/lumino-admin-bootstrap-template/) or
 [Live Demo](https://medialoot.com/preview/lumino-premium/index.html)
 
 ### Step to templating
+1. Download template [here](https://medialoot.com/item/lumino-admin-bootstrap-template/)
+2. Extract and copy css, fonts, and js directory in static directory according the above structure
+3. Create `head.html` in templates directory according the above structure. This file will move tag `<head></head>` from Lumino template master `index.html` and change url for stylesheet and js is required
+```html
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flask Project</title>
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+	<link href="static/css/styles.css" rel="stylesheet">
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="static/js/html5shiv.js"></script>
+	<script src="static/js/respond.min.js"></script>
+	<![endif]-->
+```
 
 ### Break down into end to end tests
 
