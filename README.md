@@ -41,12 +41,16 @@ virtualenv venv
 > On windows -> venv\Scripts\activate
 > On linux -> . env/bin/activate
 ```
-3. Create `run.py` directory inside flask-project according the above structure
+3. Install flask library on your virtual environment with pip
+```
+pip install flask
+```
+4. Create `run.py` directory inside flask-project according the above structure
 ```python
 from app import app
 app.run(debug=True, host='127.0.0.1', port=5000)
 ```
-4. Create `controller.py` according the abpove structure (flask-project/app/module/)
+5. Create `controller.py` according the abpove structure (flask-project/app/module/)
 ```python
 from flask import render_template, request
 from app import app
@@ -55,14 +59,26 @@ from app import app
 def index():
   return render_template("index.html")
 ```
-5. Create `__init__.py` inside app directory according the above structure (flask-project/app/)
+6. Create `__init__.py` inside app directory according the above structure (flask-project/app/)
 ```python
 from flask import Flask
 from app.module.controller import *
 
 app = Flask(__name__)
 ```
-
+7. Create `index.html` inside templates directory according the above structure
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Project</title>
+</head>
+<body>
+    <h1>This is from Flask Project -> app.module.controller.index</h1>
+</body>
+</html>
+```
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
