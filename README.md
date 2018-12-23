@@ -88,6 +88,7 @@ python run.py
 
 ![Sample](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-run.PNG)
 
+10. To stop the service of flask project (__CTRL + C__)
 
 ## Templating flask project with bootstrap
 
@@ -651,53 +652,74 @@ def index():
 </body>
 </html>
 ```
-11.
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+11. Run the project
 ```
-Give an example
+python run.py
 ```
+12. Access `localhost:5000` according port that created in `run.py`
 
-### And coding style tests
+![Sample Dashboard](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-templating.PNG)
 
-Explain what these tests test and why
-
+13. If you want to create an Error handling, create file `404.html` inside templates directory according the above structure
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="error-page text-center">
+					<h1>Error 404</h1>
+					<h3>Page Not Found</h3>
+					<p>The page you requested could not be found. Use your browsers Back button to navigate to the page or use the search form to find what you are looking for.</p>
+					<form>
+						<div class="input-group input-group-lg">
+							<input type="text" placeholder="Search" class="form-control">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default" tabindex="-1">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+						</div>
+					</form>
+					<br/>
+					<a href="index.html" class="btn btn-lg btn-primary">Return to previous page</a>
+				</div>
+			</div><!-- /.col-->
+		</div><!-- /.row -->
+{% include "scripts.html" %}
+</body>
+</html>
 ```
-Give an example
+14. Add source code error handling in `contoller.py` in module directory
+```python
+@app.errorhandler(404)
+def notfound(error):
+    return render_template("404.html")
 ```
+15. Run the project
 
-## Deployment
+16. Access `localhost:5000/dkjskdjksdekwrwr` according port that created in `run.py`
 
-Add additional notes about how to deploy this on a live system
+![Sample Error 404](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-error-404.PNG)
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Python 3](https://www.python.org/download/releases/3.0/) - The language programming used
+* [Flask](http://flask.pocoo.org/) - The web framework used
+* [Virtualenv](https://virtualenv.pypa.io/en/latest/) - The virtual environment used
 
-## Contributing
+## Clone or Download
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+You can clone or download this project
+```
+> Clone : git clone https://github.com/piinalpin/flask-project.git
+```
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alvinditya Saputra** - *Initial work* - [DSS Consulting](https://dssconsulting.id/) - [LinkedIn](https://linkedin.com/in/piinalpin) [Instagram](https://www.instagram.com/piinalpin) [Twitter](https://www.twitter.com/piinalpin)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
