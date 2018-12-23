@@ -8,27 +8,44 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Make sure you have installed Python 3 on your device
 
+### Project structure
 ```
-Give examples
+* flask-project
+  |--- app
+  |    |--- db
+  |    |--- module
+  |    |    |--- __init__.py
+  |    |    |--- controller.py
+  |    |    |--- models.py
+  |    |--- static (css, javascript, dist bootstrap)
+  |    |--- templates (html file)
+  |    |--- __init__.py
+  |--- venv
+  |--- run.py
 ```
 
-### Installing
+### Step to create flask project
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+1. Install virtual environment
 
 ```
-Give the example
+pip install virtualenv
 ```
-
-And repeat
-
+2. Create virtual environment and activate inside your flask-project directory according the above structure
 ```
-until finished
+virtualenv venv
+> On windows -> venv\Scripts\activate
+> On linux -> . env/bin/activate
 ```
+3. Create `run.py` directory inside flask-project according the above structure
+```python
+from app import app
+```
+4. 
 
 End with an example of getting some data out of the system or using it for a little demo
 
