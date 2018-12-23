@@ -88,6 +88,7 @@ python run.py
 
 ![Sample](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-run.PNG)
 
+10. To stop the service of flask project (__CTRL + C__)
 
 ## Templating flask project with bootstrap
 
@@ -651,7 +652,60 @@ def index():
 </body>
 </html>
 ```
-11.
+11. Run the project
+```
+python run.py
+```
+12. Access `localhost:5000` according port that created in `run.py`
+
+![Sample Dashboard](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-templating.PNG)
+
+13. If you want to create an Error handling, create file `404.html` inside templates directory according the above structure
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="error-page text-center">
+					<h1>Error 404</h1>
+					<h3>Page Not Found</h3>
+					<p>The page you requested could not be found. Use your browsers Back button to navigate to the page or use the search form to find what you are looking for.</p>
+					<form>
+						<div class="input-group input-group-lg">
+							<input type="text" placeholder="Search" class="form-control">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default" tabindex="-1">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+						</div>
+					</form>
+					<br/>
+					<a href="index.html" class="btn btn-lg btn-primary">Return to previous page</a>
+				</div>
+			</div><!-- /.col-->
+		</div><!-- /.row -->
+{% include "scripts.html" %}
+</body>
+</html>
+```
+14. Add source code error handling in `contoller.py` in module directory
+```python
+@app.errorhandler(404)
+def notfound(error):
+    return render_template("404.html")
+```
+15. Run the project
+
+16. Access `localhost:5000/dkjskdjksdekwrwr` according port that created in `run.py`
+
+![Sample Error 404](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-error-404.PNG)
+
+
 ### Break down into end to end tests
 
 Explain what these tests test and why
