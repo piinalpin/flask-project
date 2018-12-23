@@ -1,6 +1,6 @@
 # Flask Project
 
-How to create flask project with virtual environment and Python 3
+How to create flask project with virtual environment and Python 3 and templating with bootstrap framework
 
 ## Getting Started
 
