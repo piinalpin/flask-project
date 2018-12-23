@@ -84,6 +84,7 @@ from app.module.controller import *
 ```
 python run.py
 ```
+9. Access `localhost:5000` according port that created in `run.py`
 ![Sample](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-run.PNG)
 
 End with an example of getting some data out of the system or using it for a little demo
