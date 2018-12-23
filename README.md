@@ -12,17 +12,17 @@ Make sure you have installed Python 3 on your device
 
 ### Project structure
 ```
-* flask-project
-  |--- app
-  |    |--- db
-  |    |--- module
+* flask-project/
+  |--- app/
+  |    |--- db/
+  |    |--- module/
   |    |    |--- __init__.py
   |    |    |--- controller.py
   |    |    |--- models.py
-  |    |--- static (css, javascript, dist bootstrap)
-  |    |--- templates (html file)
+  |    |--- static/ (css, javascript, dist bootstrap)
+  |    |--- templates/ (html file)
   |    |--- __init__.py
-  |--- venv
+  |--- venv/
   |--- run.py
 ```
 
@@ -705,6 +705,34 @@ def notfound(error):
 
 ![Sample Error 404](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-error-404.PNG)
 
+
+### After change structure of flask project
+```
+* flask-project/
+  |--- app/
+  |    |--- db/
+  |    |--- module/
+  |    |    |--- __init__.py
+  |    |    |--- controller.py
+  |    |    |--- models.py
+  |    |--- static/
+  |    |    |--- css/
+  |    |    |--- fonts/
+  |    |    |--- js/
+  |    |--- templates/
+  |    |    |--- 404.html
+  |    |    |--- dashboard.html
+  |    |    |--- footer.html
+  |    |    |--- head.html
+  |    |    |--- index.html
+  |    |    |--- login.html
+  |    |    |--- navbar.html
+  |    |    |--- scripts.html
+  |    |    |--- sidebar.html
+  |    |--- __init__.py
+  |--- venv/
+  |--- run.py
+```
 
 ## Built With
 
