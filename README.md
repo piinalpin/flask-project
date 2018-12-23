@@ -89,9 +89,12 @@ python run.py
 ![Sample](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-run.PNG)
 
 
-### Templating flask project with bootstrap
+## Templating flask project with bootstrap
 
-Explain how to run the automated tests for this system
+This project will use [Lumino Template Bootstrap](https://medialoot.com/item/lumino-admin-bootstrap-template/)
+[Live Demo](https://medialoot.com/preview/lumino-premium/index.html)
+
+### Step to templating
 
 ### Break down into end to end tests
 
