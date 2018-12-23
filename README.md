@@ -602,7 +602,56 @@ This project will use [Lumino Template Bootstrap](https://medialoot.com/item/lum
 			</div><!--/.col-->
 		</div><!--/.row-->
 ```
+9. Change `controller.py` to define templates and variables which is that will be load on `index.html` to parsing template. That will parsing `pageData` to load `dashboard.html`
+```python
+@app.route('/')
+def index():
+    pageData = {
+        "breadcrumb": "Dashboard",
+        "pageHeader": "Dashboard",
+        "pages": "dashboard.html"
+    }
+    return render_template("index.html", pageData=pageData)
+```
+10. Change `index.html` to create templates page loader (Parsing template)
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	{% include "head.html" %}
+</head>
+<body>
+	{% include "navbar.html" %}
 
+    {% include "sidebar.html" %}
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">{{ pageData['breadcrumb'] }}</li>
+			</ol>
+		</div><!--/.row-->
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">{{ pageData['pageHeader'] }}</h1>
+			</div>
+		</div><!--/.row-->
+
+		{% include pageData['pages'] %}
+
+        {% include "footer.html" %}
+	</div>	<!--/.main-->
+
+	{% include "scripts.html" %}
+
+</body>
+</html>
+```
+11.
 ### Break down into end to end tests
 
 Explain what these tests test and why
