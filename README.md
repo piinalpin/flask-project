@@ -62,9 +62,10 @@ def index():
 6. Create `__init__.py` inside app directory according the above structure (flask-project/app/)
 ```python
 from flask import Flask
-from app.module.controller import *
 
 app = Flask(__name__)
+
+from app.module.controller import *
 ```
 7. Create `index.html` inside templates directory according the above structure
 ```html
@@ -79,6 +80,11 @@ app = Flask(__name__)
 </body>
 </html>
 ```
+8. Run this project with terminal or command promt
+```
+python run.py
+```
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
