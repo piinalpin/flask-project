@@ -706,43 +706,22 @@ def notfound(error):
 ![Sample Error 404](https://raw.githubusercontent.com/piinalpin/flask-project/master/Sample-error-404.PNG)
 
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Python 3](https://www.python.org/download/releases/3.0/) - The language programming used
+* [Flask](http://flask.pocoo.org/) - The web framework used
+* [Virtualenv](https://virtualenv.pypa.io/en/latest/) - The virtual environment used
 
-## Contributing
+## Clone or Download
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+You can clone or download this project
+```
+> Clone : git clone https://github.com/piinalpin/flask-project.git
+```
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alvinditya Saputra** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
